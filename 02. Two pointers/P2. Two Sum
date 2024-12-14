@@ -1,0 +1,17 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        visited = {}
+        for i , num in enumerate(nums):
+            if(target-num) in visited:
+                return [i,visited[target-num]]
+            else:
+                visited[num] = i
+
+
+Time completexity O(N)
+Space completexity O(N)
