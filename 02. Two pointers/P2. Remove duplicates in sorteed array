@@ -4,7 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        left, right = 1,1
+        left, right = 1,1 #here we are not keeping the left as 0 because even 
+                         #if it is a repeated no we still need to one occurance of it
 
         while(right < len(nums)):
             if(nums[left-1]!= nums[right]):

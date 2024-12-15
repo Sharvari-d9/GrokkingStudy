@@ -1,0 +1,18 @@
+"""
+Uses similar approach asthe remove duplicates one, but here we need to compare with the target val, instead of checking duplicates
+"""
+
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        left, right = 0,0
+        while(right<len(nums)):
+            if(nums[right]!=val):
+                nums[left] = nums[right]
+                left += 1
+            right += 1                      
+        return left
